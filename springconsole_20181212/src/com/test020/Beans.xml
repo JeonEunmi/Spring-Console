@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="helloWorld" class="com.test020.HelloWorld">
+		<!-- 메시지에 대한 의존 주입 설정 추가 -->
+		<property name="message">
+		
+			<!-- Spring - Injecting Collection -->
+			<!-- 외부에서 DI 공급하는 자료가 컬렉션 자료인 경우
+			<list>, <set>, <map>, <props> 등의 전용 엘리먼트 사용 -->
+			<map>
+				<entry key="B01" value="Hello, World!" />
+				<entry key="B02" value="TEST" />
+			</map>
+			
+		</property>
+	</bean>
+
+</beans>	

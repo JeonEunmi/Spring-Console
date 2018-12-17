@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- 어노테이션 사용을 위한 설정 -->
+	<context:annotation-config />
+
+	<!-- 스프링 프레임워크가 관리할 클래스 정보 설정 -->
+	<bean id="helloWorldA" class="com.test024.HelloWorldA">
+	</bean>
+
+	<!-- 스프링 프레임워크가 관리할 클래스 정보 설정 -->
+	<bean class="com.test024.HelloWorldB">
+		<property name="message" value="Hello World!" />
+	</bean>
+
+</beans>
+
