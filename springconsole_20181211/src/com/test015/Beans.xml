@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- 스프링 프레임워크가 관리할 클래스 정보 설정 -->
+	<bean id="helloWorldA" class="com.test015.HelloWorldA">
+
+		<!-- constructor-arg 엘리먼트는 생성자에 의한 의존주입 지정 -->
+		<!-- HelloWorldB 객체에 대한 의존주입 설정 추가 -->
+		<!-- ref="id식별자" 속성은 의존주입 대상이 객체인 경우 사용 -->
+		<constructor-arg ref="helloWorldB" />
+	</bean>
+
+	<bean id="helloWorldB" class="com.test015.HelloWorldB">
+		<!-- 메시지에 대한 의존 주입 설정 추가 -->
+		<property name="message" value="Hello World!" />
+	</bean>
+
+</beans>	

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- 스프링 프레임워크가 관리할 클래스 정보 설정 -->
+	<!-- bean 엘리먼트 : 객체(bean) 정보 지정용 엘리먼트 -->
+	<!-- class 속성 : 객체(bean)의 클래스 정보. 패키지명 포함. -->
+	<!-- id or name 속성 : 식별자 지정. 유니크한 이름 지정 -->
+
+	<!-- 부모 빈으로 설정 -->
+	<!-- abstract 속성 : 명시적인 클래스 정보 없이 부모 빈 설정시 사용 -->
+	<bean id="helloTemplat" abstract="true">
+		<!-- 공통 설정 정보 -->
+		<property name="message" value="Hello World!" />
+	</bean>
+
+	<!-- 자식 빈으로 설정 -->
+	<bean id="helloWorldA" class="com.test012.HelloWorldA"
+		parent="helloTemplat">
+		<!-- 주의) 자기 자신의 설정 정보가 없는 상태 -->
+	</bean>
+
+	<!-- 자식 빈으로 설정 -->
+	<bean id="helloWorldB" class="com.test012.HelloWorldB"
+		parent="helloTemplat">
+		<!-- 주의) 자기 자신의 설정 정보가 없는 상태 -->
+	</bean>
+
+</beans>	
