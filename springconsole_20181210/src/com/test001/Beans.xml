@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- 스프링 프레임워크가 관리할 클래스 정보 설정 -->
+	<!-- 스프링 프레임워크가 현재 클래스에 대한 객체를 생성하고
+	사용자 요청 시 제공하게 된다. -> 제공 시 id 식별자 사용 -->
+	
+	<!-- 주의) 관리할 클래스 정보 제공시 패키지명 포함한다. -->
+	
+	<bean id="helloWorld" class="com.test001.HelloWorld">
+		<!-- setter 방식 의존 주입 지정 -->
+		<property name="message" value="Hello World!" />
+	</bean>
+
+</beans>

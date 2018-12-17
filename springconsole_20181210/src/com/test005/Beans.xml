@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<!-- 스프링 프레임워크가 관리할 클래스 정보 설정 -->
+	<!-- bean 엘리먼트 : 객체(bean) 정보 지정용 엘리먼트 -->
+	<!-- class 속성 : 객체(bean)의 클래스 정보. 패키지명 포함. -->
+	<!-- id or name 속성 : 식별자 지정. 유니크한 이름 지정 -->
+	<bean id="helloWorld" class="com.test005.HelloWorld">
+		<!-- setter 방식 의존주입 지정 -->
+		<property name="message" value="Hello World!" />
+	</bean>
+
+</beans>
